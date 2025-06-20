@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cake & Dessert Yummy - Manisnya Hari Dimulai dari Sini</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --pink: #ffb6c1;
+        --light-pink: #ffe4e1;
+        --dark-pink: #db7093;
+        --white: #fff9f9;
+        --brown: #5c3d2e;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--white);
+        color: var(--brown);
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--pink), var(--light-pink));
+        padding: 30px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .header-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      h1 {
+        font-family: "Dancing Script", cursive;
+        font-size: 3.5rem;
+        color: var(--brown);
+        margin: 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .slogan {
+        font-style: italic;
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: var(--brown);
+      }
+
+      nav {
+        background-color: var(--dark-pink);
+        padding: 15px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      nav li {
+        margin: 0 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+        font-size: 1.1rem;
+        padding: 5px 10px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+      }
+
+      nav a:hover {
+        background-color: var(--pink);
+        transform: translateY(-2px);
+      }
+
+      section {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      h2 {
+        font-family: "Dancing Script", cursive;
+        font-size: 2.5rem;
+        color: var(--dark-pink);
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .welcome {
+        text-align: center;
+        font-size: 1.1rem;
+        background-color: var(--light-pink);
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      }
+
+      .menu-highlight {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .menu-item {
+        background: white;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .menu-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .menu-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .menu-item-content {
+        padding: 20px;
+      }
+
+      .menu-item h3 {
+        margin: 0 0 10px;
+        color: var(--dark-pink);
+        font-size: 1.3rem;
+      }
+
+      .menu-item p {
+        margin: 0;
+        font-weight: 500;
+        color: var(--brown);
+      }
+
+      .price {
+        font-weight: bold;
+        color: var(--dark-pink);
+        font-size: 1.2rem;
+        margin-top: 10px;
+        display: block;
+      }
+
+      .cta-button {
+        display: inline-block;
+        background-color: var(--dark-pink);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 600;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .cta-button:hover {
+        background-color: var(--pink);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .order-section {
+        background: linear-gradient(135deg, var(--light-pink), var(--white));
+        text-align: center;
+        border-radius: 15px;
+        padding: 40px;
+        margin-top: 50px;
+      }
+
+      .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 30px;
+      }
+
+      .social-link {
+        display: inline-block;
+        background-color: var(--dark-pink);
+        color: white;
+        padding: 12px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .social-link:hover {
+        background-color: var(--pink);
+        transform: translateY(-3px);
+      }
+
+      .about-us {
+        background-color: var(--light-pink);
+        border-radius: 15px;
+        padding: 30px;
+        margin-top: 50px;
+      }
+
+      footer {
+        background-color: var(--brown);
+        color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin-top: 50px;
+      }
+
+      .footer-logo {
+        font-family: "Dancing Script", cursive;
+        font-size: 2rem;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        nav li {
+          margin: 0 10px;
+        }
+
+        .menu-highlight {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-content">
+        <h1>Cake & Dessert Yummy</h1>
+        <p class="slogan">"Manisnya Hari, Dimulai dari Cake & Dessert Yummy"</p>
+      </div>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Pesan</a></li>
+        <li><a href="#about">Tentang Kami</a></li>
+      </ul>
+    </nav>
+
+    <section id="home">
+      <div class="welcome">
+        <h2>🍰 Selamat Datang!</h2>
+        <p>Kami adalah toko kue & dessert rumahan yang menyajikan aneka cake dan dessert lucu, enak, dan kekinian. Cocok untuk hadiah, acara spesial, atau sekadar memanjakan diri.</p>
+      </div>
+    </section>
+
+    <section id="menu">
+      <h2>📸 Menu Andalan Kami</h2>
+
+      <div class="menu-highlight">
+        <div class="menu-item">
+          <img src="img/Kue Ultah.png" alt="" />
+          <div class="menu-item-content">
+            <h3>Mini Cake Lucu</h3>
+            <p>Ukuran mini dengan desain menggemaskan, rasa lembut dan lezat</p>
+            <span class="price">Rp45.000</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="img/Oreo.png" alt="" />
+          <div class="menu-item-content">
+            <h3>Choco Chip Cookies</h3>
+            <p>Renyah di luar, lembut di dalam dengan choco chips melimpah</p>
+            <span class="price">Rp18.000</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="img/Redvelvet.png" alt="" />
+          <div class="menu-item-content">
+            <h3>Dessert Box Red Velvet</h3>
+            <p>Lapisan red velvet lembut dengan cream cheese yang sempurna</p>
+            <span class="price">Rp30.000</span>
+          </div>
+        </div>
+
+        <div class="menu-item">
+          <img src="img/Bronis.png" alt="" />
+          <div class="menu-item-content">
+            <h3>Brownies Lumer</h3>
+            <p>Cokelat premium yang lumer di mulut dengan tekstur padat nan lembut</p>
+            <span class="price">Rp22.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 30px">
+        <a href="#menu" class="cta-button">👉 Lihat semua menu</a>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="order-section">
+        <h2>💬 Pesan Sekarang</h2>
+        <p>Pesan kue favoritmu sekarang dan manjakan diri dengan dessert lezat!</p>
+
+        <div class="social-links">
+          <a href="https://wa.me/6285641021730" class="social-link" target="_blank">📱 Chat WhatsApp</a>
+          <a href="https://instagram.com/sukasukakue_aja" class="social-link" target="_blank">📸 Instagram</a>
+        </div>
+
+        <p style="margin-top: 30px">📍 Lokasi: Jl. Melati No. 21, Kota Jakarta Barat</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="about-us">
+        <h2>👩🏻‍🍳 Tentang Kami</h2>
+        <p>Cake & Dessert Yummy berdiri dari dapur kecil penuh cinta. Kami percaya setiap gigitan manis bisa membawa kebahagiaan. Semua produk dibuat fresh, higienis, dan halal.</p>
+        <p>Dengan bahan-bahan pilihan dan proses pembuatan yang teliti, kami berkomitmen memberikan kualitas terbaik dalam setiap produk yang kami sajikan.</p>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-logo">Cake & Dessert Yummy</div>
+      <p>"Manisnya Hari, Dimulai dari Cake & Dessert Yummy"</p>
+      <p>&copy; 2023 Cake & Dessert Yummy. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
